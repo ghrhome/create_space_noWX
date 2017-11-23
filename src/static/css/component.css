@@ -1,0 +1,18 @@
+.am-display-none{display:none!important;}
+
+
+.am-font-color-default{color:#000;}/* 默认黑色 */
+.am-font-color-red{color:#ea1e1d;}/* 红色 */
+.am-font-color-99{color:#999;}/* 辅助文字 */
+.am-font-color-be{color:#bebebe;}/* 未选中文字 */
+
+
+.am-separator-line{
+	height:10px;
+	background-color:#ebebeb;
+}
+
+/* ======================================== page structure ======================================== */
+.am-page{position:relative;height:100%;font-size:14px;color:#000;overflow: hidden;}
+.am-page ul{list-style: none;}
+.am-content{position:absolute;left:0;right:0;top:0;bottom:0;overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;}

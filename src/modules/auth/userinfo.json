@@ -1,0 +1,30 @@
+{
+  activate: null
+  activateType: null
+  address: null
+  birthday: null
+  createDate: 1504165419000
+  creater: null
+  email: null
+  id: 784
+  isDel: "0"
+  isEmailConfirmed: "0"
+  isPhoneConfirmed: "1"
+  lastLoginDate: null
+  lastLoginIp: null
+  mac: null
+  mobile: "18116370798"
+  name: null
+  nickname: "程楠"
+  pwdIntensity: null
+  sex: null
+  source: null
+  srcOpenUserId: null
+  stat: "01"
+  updateDate: null
+  userIcon: "http://wx.qlogo.cn/mmopen/hzVGicX27IG3uAmGMeabUplPTYFFW9TW5ZXTdU5ayswZeghXK86jXZVSowC8qpibXAibdQdQlcxRv7Dn6ATGmeia8A/0"
+  userIconThumbnail: null
+  userMall: 1
+  userName: "18116370798"
+  userPwd: "81dc9bdb52d04dc20036dbd8313ed055"
+}

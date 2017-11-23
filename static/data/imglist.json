@@ -1,0 +1,41 @@
+{
+  "banner":[
+
+    {
+      "src":"./static/assets/1.jpg",
+      "link":"1"
+    },{
+      "src":"./static/assets/2.jpg",
+      "link":"2"
+    },{
+      "src":"./static/assets/3.jpg",
+      "link":"3"
+    },{
+      "src":"./static/assets/2.jpg",
+      "link":"4"
+    }
+  ],
+  "navList":[
+    {
+      "name":"平面图",
+      "icon":"./static/assets/icon_2d@2X.png",
+      "link":"http://www.baidu.com"
+    },{
+      "name":"咖啡",
+      "icon":"./static/assets/icon_coffee@2X.png",
+      "link":"404"
+    },{
+      "name":"召唤机器人",
+      "icon":"./static/assets/icon_robot@2X.png",
+      "link":"404"
+    },{
+      "name":"商品",
+      "icon":"./static/assets/icon_shop@2X.png",
+      "link":"404"
+    },{
+      "name":"数据分析",
+      "icon":"./static/assets/icon_data_analyse@2X.png",
+      "link":"404"
+    }
+  ]
+}

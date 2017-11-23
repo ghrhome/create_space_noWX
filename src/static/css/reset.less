@@ -1,0 +1,310 @@
+@import '~vux/src/styles/weui/base/reset.less';
+body {
+  background-color: #fff;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+*{box-sizing:border-box;}
+/** env = windows **/
+::-webkit-input-placeholder {
+  font-family: @weuiFontDefault;
+}
+i, cite, em, var, address, dfn {
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'vux-demo';  /* project id 70323 */
+  src: url('https://at.alicdn.com/t/font_h1fz4ogaj5cm1jor.eot');
+  src: url('https://at.alicdn.com/t/font_h1fz4ogaj5cm1jor.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_h1fz4ogaj5cm1jor.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_h1fz4ogaj5cm1jor.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_h1fz4ogaj5cm1jor.svg#iconfont') format('svg');
+}
+.vux-pop-out-enter-active,
+.vux-pop-out-leave-active,
+.vux-pop-in-enter-active,
+.vux-pop-in-leave-active {
+  will-change: transform;
+  transition: all 500ms;
+  height: 100%;
+  width:100%;
+  /*top: 46px;*/
+  position: absolute;
+  backface-visibility: hidden;
+  perspective: 1000;
+}
+.vux-pop-out-enter {
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+}
+.vux-pop-out-leave-active {
+  opacity: 0;
+  transform: translate3d(100%, 0, 0);
+}
+.vux-pop-in-enter {
+  opacity: 0;
+  transform: translate3d(100%, 0, 0);
+}
+.vux-pop-in-leave-active {
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.pull-left{float:left;}
+.pull-right{float:right;}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+body{
+  input:-ms-input-placeholder,
+  input::-webkit-input-placeholder,
+  input:-moz-placeholder,
+  input::-moz-placeholder{color:#bbbfc6;}
+
+  [class^="weui-icon-"], [class*=" weui-icon-"] {
+    display: inline-block;
+    vertical-align: middle;
+    font: normal normal normal 14px/1 "weui";
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+  [class^="weui-icon-"]:before, [class*=" weui-icon-"]:before {
+    display: inline-block;
+    margin-left: 0;
+    margin-right: .2em;
+  }
+}
+
+/*ys-icon*/
+/*
+@base-url: "http://assets.fnord.com";
+background-image: url("@{base-url}/images/bg.png");
+*/
+
+@img-base-url:'../images';
+.ys-icon{
+  display: block;
+
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center center;
+
+  &.ys-icon-tel{
+      width: 20px;
+      height: 20px;
+      background-image:url("@{img-base-url}/icon_tel@2x.png");
+  }
+
+  &.ys-icon-lock{
+    width: 20px;
+    height: 17px;
+    background-image:url("@{img-base-url}/icon_lock@2x.png");
+  }
+
+  &.ys-icon-shield{
+    width: 20px;
+    height: 20px;
+    background-image:url("@{img-base-url}/icon_shield@2x.png");
+  }
+
+  &.ys-icon-lost-key{
+    width:16px;height:16px;
+    background-image:url("@{img-base-url}/icon_lost_key@2x.png");
+  }
+
+  &.ys-icon-ticket{
+    background-image:url("@{img-base-url}/icon_ticket@2x.png");
+  }
+  &.ys-icon-qrcode{
+    background-image:url("@{img-base-url}/icon_qrcode@2x.png");
+  }
+  &.ys-icon-list{
+    background-image:url("@{img-base-url}/icon_list@2x.png");
+  }
+  &.ys-icon-coupon{
+    background-image:url("@{img-base-url}/icon_coupon@2x.png");
+  }
+  &.ys-icon-cart{
+    background-image:url("@{img-base-url}/icon_cart@2x.png");
+  }
+  &.ys-icon-badge{
+    background-image:url("@{img-base-url}/icon_badge@2x.png");
+  }
+  &.ys-icon-activity{
+    background-image:url("@{img-base-url}/icon_activity@2x.png");
+  }
+}
+
+.vux-check-icon{
+
+  .weui-icon{
+    position: relative;
+    top:-1px;
+  }
+  .weui-icon-circle:before {
+    content: " ";
+    width:16px;height:16px;
+    background-image:url("@{img-base-url}/check_frame@2x.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position:center center;
+  }
+
+  .weui-icon-success:before {
+    content: " ";
+    width:16px;height:16px;
+    background-image:url("@{img-base-url}/check_checked@2x.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position:center center;
+  }
+}
+
+/*ys-figure*/
+.ys-figure{
+  display: block;
+  border-radius:100%;
+  background-color:#f3f4f8;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center center;
+
+  &.ys-figure-lg{
+    width:76px;
+    height:76px;
+  }
+  &.ys-figure-md{
+    width:44px;
+    height:44px;
+  }
+}
+
+/*ys-badge*/
+.ys-badge{
+  display: block;
+  position:relative;
+  width:20px;
+  height:20px;
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position:center center;
+  &.ys-badge-0{
+    background:none;
+  }
+  &.ys-badge-1{
+    background-image:url('@{img-base-url}/badge_1@2x.png')
+  }
+}
+
+
+/*reset */
+#app-view-box{
+  .weui-tab__panel{
+    padding-bottom:0;
+  }
+}
+
+.weui-cells:before{display:none;}
+
+body{
+
+  .vux-tab {
+    display: block;
+    height: 44px;
+
+    .vux-tab-ink-bar {
+      display: none !important;
+    }
+
+    .vux-tab-item {
+      width: auto;
+      float: left;
+      background-image: none;
+
+      &.vux-tab-selected {
+        border-bottom: 2px @theme-color solid !important;
+      }
+
+      &:not(:first-child) {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .weui-btn {
+    &+.weui-btn {
+      margin-top: 0;
+    }
+    &.weui-btn_mini+.weui-btn_mini {
+      margin-left: 15px;
+    }
+
+    &.weui-btn_loading {
+
+    }
+  }
+
+  .xs-plugin-pullup-container {
+    line-height: 40px;
+    font-size: 14px;
+  }
+
+
+  .vux-slider.type2 {
+    padding-bottom: 1px;
+
+    .vux-swiper {
+      box-sizing: content-box;
+      height: 0 !important;
+      width: 100%;
+
+      .vux-swiper-item {
+        position: absolute;
+        left: 6%;
+        right: 6%;
+        top: 0;
+        bottom: 0;
+        width: auto;
+        height: auto;
+
+      }
+
+      &+.vux-indicator {
+        position: relative;
+        top: 0;
+        right: auto;
+        bottom: auto;
+        margin: 20px 0;
+        text-align: center;
+
+        a {
+          display: inline-block;
+          float: none;
+
+          i {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+          }
+        }
+
+      }
+    }
+
+  }
+}
