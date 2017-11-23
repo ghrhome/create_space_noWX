@@ -97,7 +97,7 @@
       ]),
 
       editUserInfo:function(){
-        console.log("......");
+
         this.$router.push({
           path:'userinfo'
         })
@@ -121,7 +121,7 @@
       }
     },
     created () {
-      console.log("--------created")
+
       let vm=this;
       vm.$http(
         {
@@ -129,12 +129,7 @@
           headers: {'Content-Type': 'application/x-www-form-urlencoded'},
           url:  `${baseUrl}banner/getIndexBanner.htm`,
           data:{
-            session_key_1:tokenKey
           },
-         /* params: {
-
-            //
-          }*/
         }
       ).then(
         res=>{
@@ -142,7 +137,6 @@
           if (res.status == 200) {
             if(res.data.code==0){
               var data = res.data.data;
-              console.log(data);
               vm.setImgList(data.banner);
               vm.setNavList(data.navList);
             }else{
@@ -150,7 +144,7 @@
               vm.showAlertMsg();
             }
           }
-          console.log(vm.imgList)
+
         }
       )//end http;
     }

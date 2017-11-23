@@ -31,8 +31,6 @@
 
   import mainConfig from '@/main_config'
   const baseUrl=mainConfig.baseUrl;
-  var tokenKey=mainConfig.tokenKey;
-
 
   export default {
     components: {
@@ -129,7 +127,6 @@
               mobile: this.tmpPhone,
               validateMobile:true,
               channel:'register',
-              session_key_1:tokenKey
             },
           }
         ).then(

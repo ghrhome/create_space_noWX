@@ -75,7 +75,7 @@
       },
       /*takePhoto(menuKey, menuItem){*///old 通过本地菜单调取微信拍照或相册
       takePhoto(){
-        let vm=this;
+       /* let vm=this;
         let images=vm.images;
         //let _souceType=menuKey;
 
@@ -89,7 +89,7 @@
             images.localId = res.localIds;
             vm.uploadPhoto();
           }
-        });
+        });*/
       },
       userLogout(){
         let vm=this;
@@ -189,7 +189,6 @@
             data:{
               'type':type,
               'value':val,
-              'session_key_1':tokenKey
             },
 
           }
@@ -246,7 +245,7 @@
     created () {
       //this.$store.dispatch('userInfo/getUserInfo')
       //this.getAllProducts();
-      console.log(this.$route);
+      //console.log(this.$route);
     }
   }
 </script>

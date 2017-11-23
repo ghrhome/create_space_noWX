@@ -40,7 +40,6 @@
 
   import mainConfig from '@/main_config'
   const baseUrl=mainConfig.baseUrl;
-  var tokenKey=mainConfig.tokenKey;
 
   export default {
     components: {
@@ -109,31 +108,25 @@
             data:{
               mobile: this.phoneNum,
               pwd: this.password,
-              session_key_1:tokenKey
             },
             emulateJSON: true
           }
         ).then(
           response=> {
-            console.log(response);
             if(response.data.code==100){
-              console.log("..............")
-              console.log(response.data.msg)
+
               this.errorMessage = response.data.msg;
               this.showAlertMsg();
               return false;
             }
             var not_verified = (response.data.code==1);
             if (not_verified) {
-              console.log("..............")
-              console.log(response.data.msg);
               this.errorMessage = response.data.msg;
               this.showAlertMsg();
               return false;
             } else {
               //这里根据逻辑改进，登陆至初始登陆页面
               //setlogin true & get user info
-              console.log(response)
               vm.setLogin({
                 login:true
               });

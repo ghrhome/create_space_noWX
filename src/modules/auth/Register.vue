@@ -163,20 +163,17 @@
               mobile: this.phoneNum,
               validateMobile:true,
               channel:'register',
-              session_key_1:tokenKey
             },
           }
         ).then(
           res=> {
-            console.log(res);
+
             if (res.status == 200) {
               var data = res.data;
-              console.log(data);
               if(data.code==0){
                 this.veriCode=true;
                 this.countDownStart();
               }else if(data.code==1){
-                console.log('0000')
                 this.errorMessage=data.msg;
                 this.showAlertMsg();
               }
@@ -221,16 +218,12 @@
               mobile: this.phoneNum,
               pwd: this.password,
               code:this.inputVeri,
-              session_key_1:tokenKey
             },
           }
         ).then(
           response=> {
-          console.log(response);
 
           if(response.data.code==100){
-              console.log("..............")
-              console.log(response.data.msg)
               this.errorMessage = response.data.msg;
               this.showAlertMsg();
               return false;
@@ -238,8 +231,7 @@
 
           var not_verified = (response.data.code==1);
           if (not_verified) {
-            console.log("..............")
-            console.log(response.data.msg);
+
             this.errorMessage = response.data.msg;
             this.showAlertMsg();
             return false;

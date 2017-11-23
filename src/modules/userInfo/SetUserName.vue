@@ -83,7 +83,6 @@
               data:{
                 'type':'name',
                 'value':vm.tmpName,
-                'session_key_1':tokenKey
               },
             }
           ).then(
